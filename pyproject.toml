@@ -1,0 +1,20 @@
+[project]
+name = "weixin-automation"
+version = "0.1.0"
+description = "macOS Accessibility prototype for local WeChat desktop automation."
+requires-python = ">=3.11"
+dependencies = [
+    "pyobjc>=11.0",
+]
+
+[project.scripts]
+wechat-inspect-ax = "weixin_automation.cli:inspect_wechat_ax"
+wechat-fill-draft = "weixin_automation.cli:fill_wechat_draft"
+wechat-ocr-window = "weixin_automation.cli:ocr_wechat_window"
+wechat-message-contact = "weixin_automation.cli:message_contact"
+
+[tool.setuptools.packages.find]
+include = ["weixin_automation*"]
+
+[tool.uv]
+package = true
